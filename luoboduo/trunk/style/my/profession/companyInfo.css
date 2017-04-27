@@ -1,0 +1,227 @@
+.company-info {
+    background-color: #f6f7f8;
+    overflow: hidden;
+}
+
+/*头部区域*/
+.company-info-header {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    height: 200px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+/*公司logo*/
+.company-info-img {
+    float: left;
+    width: 200px;
+    height: 100%;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    line-height: 200px;
+}
+
+@media screen and (max-width: 420px) {
+    .company-info-img {
+        width: 130px;
+        height: 70%;
+        margin-top: 5%;
+    }
+
+    .company-info-img img {
+        margin-top: 20% !important;
+        vertical-align: baseline;
+    }
+
+    .company-info-tittle .name {
+        margin-top: 2rem;
+    }
+}
+
+.company-info-img img {
+    max-width: 100%;
+}
+
+/*公司信息*/
+.company-info-tittle {
+    padding: 4%;
+}
+
+.company-info-tittle .name {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    padding-right: 2%;
+}
+
+.company-info-tittle .approved {
+    display: inline-block;
+    padding: .2% 1%;
+    font-size: 12px;
+    color: #fff;
+    background-color: #f43851;
+    border-radius: 10px;
+}
+
+.company-info-tittle p {
+    padding: 2% 0;
+    color: #999;
+}
+
+/*内容区域*/
+.company-info-content {
+    margin-bottom: 2%;
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 4%;
+}
+
+.company-info-btn > span {
+    display: inline-block;
+    font-size: 16px;
+    padding: 2%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/*公司详情部分*/
+.company-info-txt1 {
+    border-right: 1px solid #e8e8e8;
+}
+
+@media screen and (max-width: 767px) {
+    .company-info-txt1 {
+        border-right: none;
+    }
+
+    .content-right-main {
+        padding-left: 4% !important;
+    }
+
+}
+.content-right-main-welfare{
+    box-sizing: border-box;
+    /*text-align: center;*/
+    width:100%;
+    padding-left: 20px;
+}
+.content-right-main-welfare span{
+    line-height: 22px;
+    color: #536a82;
+    border: 1px solid #d9d9d9;
+    margin: 8px 15px 5px 0;
+    border-radius: 20px;
+    display: inline-block;
+    min-width: 70px;
+    text-align: center;
+    padding: 0 5px;
+    font-size: 12px;
+}
+.company-info-txt1 .tittle {
+    padding: 3% 0;
+}
+
+.company-info-txt1 .tittle > span {
+    display: inline-block;
+    width: 4px;
+    height: 18px;
+    margin-right: 2%;
+    background-color: #f43851;
+    vertical-align: middle;
+}
+
+.company-info-txt1 .txt {
+    /*display: inline-block;*/
+    min-height: 160px;
+    padding: 4%;
+    line-height: 30px;
+    color: #999;
+    /*display: -webkit-box;*/
+    /*-webkit-box-orient: vertical;*/
+    /*-webkit-line-clamp: 5;*/
+    /*overflow: hidden;*/
+}
+
+/*公司信息部分*/
+.content-right {
+    overflow: hidden;
+    padding-top: 4.2%;
+}
+
+.content-right-main {
+    padding-left: 6%;
+    /*border-left: 2px solid #e8e8e8;*/
+    font-size: 14px;
+    color: #999;
+}
+
+.content-right-main .tittle {
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.content-right-main .line {
+    display: inline-block;
+    width: 60%;
+    height: 2px;
+    padding-left: 4%;
+    background-color: #e8e8e8;
+    vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+    .content-right-main .line {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .content-right-main .line {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .content-right-main .line {
+        width: 73%;
+    }
+}
+
+.content-right-main .part {
+    line-height: 50px;
+    height: 50px;
+    padding-left: 10%;
+}
+
+.content-right-main .part span {
+    display: inline-block;
+    padding-left: 4%;
+    vertical-align: middle;
+}
+
+.content-right-main .part img {
+    vertical-align: middle;
+}
+
+.content-right-main > span {
+    display: inline-block;
+    padding: 0 3%;
+    border: 1px solid #e8e8e8;
+}
+
+.line-content {
+    display: inline-block;
+    width: 98%;
+    height: 1px;
+    background-color: #e8e8e8;
+}
+
+.company-info-btn {
+    font-size: 0;
+}
+.company-btn{
+    color: #fc2b47;
+    border-bottom: 2px solid #fc2b47;
+}

@@ -1,0 +1,932 @@
+.profession-main {
+    font-size: 0;
+    background-color: #f6f7f8;
+    /*overflow: hidden;*/
+}
+
+/*导航栏和banner部分*/
+.profession-home-header {
+    margin-top: 2%;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.profession-home-bg {
+    float: left;
+    width: 240px;
+    position: relative;
+}
+
+@media screen and (max-width: 992px) {
+    .profession-home-bg {
+        display: none;
+    }
+}
+
+.prof-home-nav {
+    height: 152px;
+    padding: 16px 6.7%;
+    font-size: 14px;
+    color: #fff;
+    background-color: #f43851;
+    overflow: hidden;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border-top: 1px solid #f43851;
+    border-bottom: 1px solid #f43851;
+}
+
+.prof-home-nav .img-left {
+    float: right;
+    width: auto;
+    padding: 10px;
+    margin-right: 15px;
+    background: url(../../../images/profession-home-left.png) no-repeat center center;
+    vertical-align: middle;
+}
+
+.prof-home-nav:hover .img-left {
+    float: right;
+    width: auto;
+    padding: 10px;
+    margin-right: 15px;
+    background: url(../../../images/findJobArrowRed.png) no-repeat center center;
+    vertical-align: middle;
+}
+
+.prof-home-nav span {
+    font-size: 18px;
+    display: inline-block;
+    padding-left: 3.3%;
+    vertical-align: middle;
+}
+
+.prof-home-nav:hover {
+    color: #f43851;
+    background-color: #fff;
+}
+
+/*.prof-home-nav-tittle .imgOne{*/
+/*display: inline-block;*/
+/*padding: 10px;*/
+/*vertical-align: middle;*/
+/*}*/
+/*左侧导航栏图片*/
+.prof-home-nav:nth-child(1) .imgSelect {
+    background: url(../../../images/profession-home-img1.png) no-repeat center center;
+}
+
+.prof-home-nav:hover:nth-child(1) .imgSelect {
+    background: url(../../../images/productRed.png) no-repeat center center;
+}
+
+.prof-home-nav:nth-child(2) .imgSelect {
+    background: url(../../../images/research.png) no-repeat center center;
+}
+
+.prof-home-nav:hover:nth-child(2) .imgSelect {
+    background: url(../../../images/researchRed.png) no-repeat center center;
+}
+
+.prof-home-nav:nth-child(3) .imgSelect {
+    background: url(../../../images/bigData.png) no-repeat center center;
+}
+
+.prof-home-nav:hover:nth-child(3) .imgSelect {
+    background: url(../../../images/bigDataRed.png) no-repeat center center;
+}
+
+/*.profession-home-bg .imgSelect:nth-child(1){*/
+/*background: url(../../../images/profession-home-img1.png) no-repeat center center;*/
+/*}*/
+/*.profession-home-bg .imgSelect:nth-child(2){*/
+/*background: url(../../../images/research.png) no-repeat center center;*/
+/*}*/
+/*.profession-home-bg:hover .imgSelect:nth-child(2){*/
+/*background: url(../../../images/researchRed.png) no-repeat center center;*/
+/*}*/
+/*.profession-home-bg:hover .imgSelect:nth-child(1){*/
+/*background: url(../../../images/productRed.png) no-repeat center center;*/
+/*}*/
+.profession-home-bg .imgOne {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+.prof-home-nav-content {
+    display: flex;
+    height: 102px;
+    padding: 8px 0;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.prof-home-nav-content > span {
+    padding-right: 8.3%;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/*三级菜单页面*/
+.prof-nav-item {
+    position: absolute;
+    left: 92%;
+    top: 0;
+    display: none;
+    width: 280%;
+    height: 456px;
+    padding-left: 20%;
+    padding-top: 10%;
+    border: 1px solid #f43851;
+    border-left: none;
+    font-size: 14px;
+    color: #536a82;
+    box-sizing: border-box;
+}
+
+.prof-nav-item .tittle {
+    display: inline-block;
+    font-size: 16px;
+    color: #f43851;
+    width: 12%;
+}
+
+.prof-nav-item div {
+    line-height: 24px;
+}
+
+.prof-nav-item .content {
+    display: inline-block;
+    font-size: 14px;
+    width: 12%;
+    padding: 0 2%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.prof-home-nav:hover .prof-nav-item {
+    display: block;
+    z-index: 999;
+    background-color: #fff;
+}
+
+.profession-home-bg .col-lg-2 {
+    padding-right: 0;
+}
+
+.prof-nav-item .content:hover {
+    color: #fc2b47;
+}
+
+/*banner*/
+
+.prof-banner {
+    float: left;
+    position: relative;
+    padding: 0;
+    width: calc(100% - 240px);
+    overflow: hidden;
+}
+
+@media screen and (max-width: 992px) {
+    .prof-banner {
+        width: 100% !important;
+    }
+}
+
+.prof-carousel-btn {
+    display: flex;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.prof-banner .prof-carousel-btn1, .prof-banner .prof-carousel-btn2 {
+    position: absolute;
+    width: 30px;
+    height: 40px !important;
+    top: 45%;
+}
+
+.prof-banner .prof-carousel-btn1 {
+    left: 15px;
+}
+
+.prof-banner .prof-carousel-btn2 {
+    right: 15px;
+}
+
+.prof-banner img {
+    width: 100%;
+    height: 456px !important;
+    top: 50%;
+}
+
+@media screen and (max-width: 992px) {
+    .prof-banner img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*banner search*/
+.prof-input-search {
+    position: absolute;
+    width: 70%;
+    height: 6rem;
+    top: 5.8%;
+    left: 15%;
+    padding: 1% 0;
+    background-color: rgba(142, 91, 100, 0.3);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.prof-search-content {
+    position: relative;
+    margin: .4rem auto;
+    font-size: 0;
+    width: 95.7%;
+    padding: 1rem 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    .prof-input-search {
+        width: 90%;
+        left: 5%;
+    }
+
+    .recommend-job-list {
+        padding: 2% 0 !important;
+    }
+
+}
+
+@media screen and (max-width: 767px) {
+    .prof-banner img {
+        width: 100%;
+        height: auto !important;
+    }
+}
+
+.prof-banner-ol li {
+    margin: 0 6px;
+}
+
+.prof-banner-ol .active {
+    margin: 0 6px -1px 6px;
+}
+
+.prof-search-content span {
+    display: inline-block;
+    padding: 0 3%;
+    border-right: 1px solid #f0f0f0;
+    text-align: center;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.prof-search-content input {
+    display: inline-block;
+    width: auto;
+    font-size: 14px;
+    padding-left: 3%;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.prof-search-content button {
+    position: absolute;
+    display: inline-block;
+    width: 7rem;
+    height: 100%;
+    z-index: 9;
+    right: -1px;
+    top: 0;
+    border: none;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    background-color: #fc2a48;
+    outline: none;
+    border-radius: 0 10px 10px 0;
+}
+
+/*推荐最新职位*/
+.prof-recommend {
+    position: relative;
+    padding-top: 1%;
+    font-size: 14px;
+    color: #999;
+}
+
+.prof-recommend-tittle {
+    padding: 1% 0 5px 0;
+    overflow: hidden;
+}
+
+.prof-recommend-tittle span {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.prof-recommend-more {
+    float: right;
+    cursor: pointer;
+    color: black;
+}
+
+.prof-recommend-more:hover {
+    color: #fc2a48;
+}
+
+.recommend-tittle {
+    font-size: 16px !important;
+    color: black;
+    font-weight: bold;
+}
+
+/*推荐职位*/
+.recommend-job {
+    font-size: 0;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.recommend-job-list {
+    overflow: hidden;
+    padding: 2% 0;
+}
+
+@media screen and (max-width: 991px) {
+    .prof-input-search {
+        width: 90%;
+        left: 5%;
+    }
+
+    .recommend-job-list {
+        padding: 2% 10%;
+    }
+
+}
+
+.recommend-job-box {
+    /*推荐职位中每个职位的样式*/
+    width: 100%;
+    height: 134px;
+    padding: 10px;
+    margin: 2% auto;
+    border: 1px solid #e8e8e8;
+    box-sizing: border-box;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.recommend-job-box:hover {
+    box-shadow: 0 0 10px #999;
+}
+
+.job-box-img {
+    display: inline-block;
+    width: 110px;
+    height: 110px;
+    line-height: 110px;
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #e8e8e8;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.job-box-img img {
+    width: 100%;
+    height: auto;
+}
+
+.job-box-content {
+    display: inline-block;
+    width: 54%;
+    padding: 15px 0 0 20px;
+    font-size: 14px;
+    line-height: 24px;
+    /*text-align: center;*/
+    vertical-align: middle;
+}
+
+.job-box-content p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.job-box-content .name {
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.job-box-content .cost {
+    color: #f00;
+    font-size: 16px;
+}
+
+/*推荐公司*/
+.great-company {
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.great-job-tittle {
+    display: inline-block;
+    padding-top: 1%;
+    padding-left: 15px;
+    font-weight: bold;
+    font-size: 16px !important;
+    cursor: none !important;
+}
+
+.great-job-more {
+    display: inline-block;
+    padding-top: 1%;
+}
+
+.prof-carousel {
+    margin-top: 20px;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.prof-carousel:hover {
+    box-shadow: 0 0 10px #999;
+}
+
+/*优质公司小图*/
+.great-company-logo {
+    overflow: hidden;
+    z-index: 999;
+    padding: 6px;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .company-logo-list {
+        height: 82px !important;
+        line-height: 82px !important;
+    }
+
+}
+
+@media screen and (max-width: 991px) {
+    .great-company-logo {
+        padding: 10px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .company-logo-list {
+        height: 140px !important;
+        line-height: 140px !important;
+    }
+
+    .company-logo-list img {
+        width: 50% !important;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .great-company-logo-part {
+        width: 100% !important;
+    }
+
+    .company-logo-list img {
+        width: 50% !important;
+    }
+}
+
+.company-logo-list {
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    margin: 5px auto;
+    /*padding: 2px;*/
+    text-align: center;
+    /*background-color: red;*/
+    border: 1px solid #e8e8e8;
+    z-index: 999999;
+    box-sizing: border-box;
+    overflow: hidden;
+    cursor: pointer;
+}
+.company-logo-list:hover{
+    box-shadow: 0 0 10px #999;
+}
+
+.company-logo-list img {
+    width: 75%;
+    max-height: 100%;
+    height: auto;
+}
+
+.great-company-info {
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.great-company-info img {
+    width: 100%;
+    height: auto;
+}
+
+.company-info-txt {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 0 0 1.5% 15%;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.company-info-txt p {
+    width: 80%;
+    font-size: 14px;
+    z-index: 999;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.company-info-txt .tittle {
+    font-size: 16px;
+}
+
+.company-info-txt .info-part2-span1 {
+    padding-left: 0;
+}
+
+.great-company-list {
+    font-size: 14px;
+    height: 160px;
+    padding: 15px 10px;
+    /*border: 1px solid #999;*/
+    box-sizing: border-box;
+}
+
+.great-company-list .img {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    border: 1px solid #e8e8e8;
+    line-height: 120px;
+    text-align: center;
+    box-sizing: border-box;
+    vertical-align: middle;
+    overflow: hidden;
+}
+
+.great-company-list .img img {
+    width: 100%;
+}
+
+.great-company-list .company-info {
+    background-color: #fff;
+    display: inline-block;
+    width: 60%;
+    padding-left: 10px;
+    line-height: 26px;
+    border-right: 1px solid #e8e8e8;
+    vertical-align: middle;
+
+}
+
+@media screen and (max-width: 500px) {
+    .great-company-list .img {
+        width: 30%;
+        height: 80%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .great-company-list .img {
+        height: 60%;
+        line-height: 80px;
+    }
+
+}
+
+/*优质公司*/
+.company-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.great-company-list .company-info .tittle {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.company-info p {
+    width: 100%;
+    padding-right: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.company-info p span {
+    display: inline-block;
+    padding: .2% 1%;
+    margin: 0 2px;
+    border: 1px solid #e8e8e8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+}
+
+.great-company-list .prof-info {
+    /*line-height: 50px;*/
+    padding: 1% 20px;
+    border-right: none;
+}
+
+.jobNameContent {
+    padding: 4% 0;
+    /*width: 0%;*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.great-company-list .prof-info span {
+
+    padding: 0 15px;
+    /*width: 60%;*/
+    border-right: 1px solid #e8e8e8;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 665px) {
+    .great-company-list .prof-info {
+        margin-left: -5%;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .great-company-list .prof-info {
+        margin-left: -10%;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    .great-company-list .prof-info {
+        margin-left: -12%;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 405px) {
+    .great-company-list .prof-info {
+        padding-right: 0;
+    }
+
+    .great-company-list .prof-info {
+        margin-left: -13%;
+        width: auto;
+    }
+
+    .great-company-list .prof-info h4 {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .great-company-list {
+        padding: 15px 1px !important;
+    }
+
+    .great-company-list .prof-info {
+        margin-left: -11%;
+    }
+
+    .great-company-list .prof-info h4 {
+        font-size: 15px;
+    }
+}
+
+.profCarousel-content {
+    margin: 1rem
+}
+
+/*轮播区域*/
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-innergai > .item {
+        -webkit-transition: -webkit-transform .6s ease-in-out;
+        -o-transition: -o-transform .6s ease-in-out;
+        transition: transform .6s ease-in-out;
+
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    .carousel-innergai > .item.next,
+    .carousel-innergai > .item.active.right {
+        left: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    .carousel-innergai > .item.prev,
+    .carousel-innergai > .item.active.left {
+        left: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    .carousel-innergai > .item.next.left,
+    .carousel-innergai > .item.prev.right,
+    .carousel-innergai > .item.active {
+        left: 0;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.carousel-innergai > .nextgai,
+.carousel-innergai > .prevgai {
+    position: absolute;
+    top: 0;
+    left: 15px !important;
+    right: 15px !important;
+    /*margin-right: 15px;*/
+    width: auto !important;
+}
+
+.carousel-controlgai {
+    display: none;
+}
+
+@media screen and (max-width: 991px) {
+
+    .carousel-indicatorsgai-box {
+        margin: 10% 0 !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .carousel-indicators {
+        display: none !important;
+    }
+
+    .profCarousel-content {
+        /*margin: 0 !important;*/
+        width: 98%;
+        margin: auto 1%;
+    }
+
+}
+
+.carousel-indicatorsgai {
+    position: static !important;
+
+}
+
+.carousel-indicatorsgai-box {
+    padding: 0 0 0 40px !important;
+    margin: 6% 0;
+}
+
+.carousel-indicatorsgai > li {
+    display: block;
+    margin: 8px 0 !important;
+    border: 1px solid #EAEAEA !important;
+    width: 14px !important;
+    height: 14px !important;
+}
+
+.carousel-indicatorsgai li.active {
+    width: 14px !important;
+    height: 14px !important;
+    background-color: #FC2949 !important;
+    border-radius: 50%;
+    border: none !important;
+}
+
+/*ui样式区*/
+.profession-tips {
+    background-color: #fff;
+    margin: 2% 0;
+    padding: 5% 0;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+    .profession-tips {
+        text-align: center;
+    }
+
+    .part-left {
+        width: 70% !important;
+        display: block !important;
+        margin: 20px auto !important;
+    }
+
+    .profession-tips-part {
+        text-align: center;
+    }
+
+    .part-left img {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .part-left {
+        width: 90% !important;
+    }
+
+    .profession-tips-part {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width: 340px) {
+    .profession-tips-part {
+        width: 100% !important;
+    }
+}
+
+.profession-tips-part {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.part-left {
+    display: inline-block;
+    width: 40%;
+    margin: 110px 30px;
+    vertical-align: middle;
+}
+
+.part-left img {
+    vertical-align: middle;
+}
+
+.profession-tips p {
+    color: #999;
+}
+
+@media screen and (max-width: 769px) {
+    .part-left {
+        display: block;
+        text-align: center;
+        margin: 60px auto;
+    }
+}
+
+.prof-footer {
+    margin: 2% 0;
+    width: 100%;
+    padding: 12% 0;
+    font-size: 16px;
+    text-align: center;
+    color: #fff;
+    opacity: 1.2;
+    background-image: url("../../../images/prof-footer-img.png");
+}
+
+.prof-footer .tittle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+
