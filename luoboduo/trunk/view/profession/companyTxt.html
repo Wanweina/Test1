@@ -1,0 +1,20 @@
+<div class="company-info-txt1">
+    <div class="company-txt-content">
+        <div class="tittle">
+            <span></span>
+            <b class="v-middle font-16-bold" >在招职位共{{vm.total}}个</b>
+        </div>
+        <div class="company-info-txt-list" ng-repeat="x in vm.companyProfJob track by $index"
+             ui-sref="professionInfo({id:x.id})">
+            <span class="name font-16-bold">{{x.name}}</span>
+            <span class="cost">{{x.compensation|compensationFilter}}</span>
+            <div class="experience">
+                <span>{{x.experience|experienceFilter}}/</span>
+                <span>{{x.education|educationFilter}}/全职</span>
+            </div>
+            <span class="date">{{x.updateAt|updateAtFilter}}</span>
+        </div>
+    </div>
+    <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+    <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
+</div>

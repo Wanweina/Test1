@@ -1,0 +1,108 @@
+<div class="search-profession container">
+    <!--搜索面板-->
+    <div class="search-prof-project">
+        <div class="search-prof-input">
+            <span class="tittle" style="letter-spacing: 5px">关键词：</span>
+            <input type="text" ng-model="vm.data.name" placeholder="输入职位关键词：如 产品经理等" ng-maxlength="38">
+            <span class="search-prof-input-span">当前关键词：{{vm.data.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">所在地区：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.province)"
+                  ng-repeat="x in vm.option.province track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">职位类别：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.category);vm.selectSubCategoryFn($index,a.choose)"
+                  ng-repeat="x in vm.option.category track by $index">{{x.name}}</span>
+        </div>
+        <!--职位类别子栏-->
+        <div class="search-prof-list search-prof-list-sub" ng-if="!vm.option.category[0].choose && vm.selectedNum < 2">
+                <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                      ng-click="vm.checkboxMulti($index,vm.option.subCategory)"
+                      ng-repeat="x in vm.option.subCategory track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">所属行业：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.industry)"
+                  ng-repeat="x in vm.option.industry track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">学历要求：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.education)"
+                  ng-repeat="x in vm.option.education track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">工作经验：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.experience)"
+                  ng-repeat="x in vm.option.experience track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">薪资水平：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.checkboxMulti($index,vm.option.compensation)"
+                  ng-repeat="x in vm.option.compensation track by $index">{{x.name}}</span>
+        </div>
+        <div class="search-prof-list">
+            <span class="tittle">发布时间：</span>
+            <span class="item" ng-class="{true:'search-btn'}[x.choose]"
+                  ng-click="vm.radioType($index,vm.option.updateAt)"
+                  ng-repeat="x in vm.option.updateAt track by $index">{{x.name}}</span>
+        </div>
+        <div class="prof-search-btn">
+            <button class="prof-search-btn1" ng-click="vm.clear()">清空</button>
+            <button class="prof-search-btn2" ng-click="vm.search()">搜索</button>
+        </div>
+    </div>
+<!--获取内容区域-->
+    <div class="search-prof-content" ng-if="vm.total">
+        <div class="row">
+            <div class="prof-content-list"
+                 ng-repeat="n in vm.profContent track by $index">
+                <div class="row"
+                     ui-sref="professionInfo({id:n.id})">
+                    <!--ui-sref跳转-->
+                    <!--左侧职位信息-->
+                    <div class="prof-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <span class="tittle">{{n.name}}</span>
+                        <span class="time">发布时间：{{n.updateAt| updateAtFilter}}</span><br>
+                        <span class="cost">{{n.compensation|compensationFilter}}</span><br>
+                        <span class="location">{{n.city|cityFilter}}-{{n.county|countyFilter}}&nbsp;/&nbsp;</span>
+                        <span class="location">{{n.education|educationFilter}}&nbsp;/&nbsp;</span>
+                        <span class="location">{{n.experience|experienceFilter}}</span>
+                    </div>
+                    <!--右侧公司信息-->
+                    <div class="comp-info col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <div class="row">
+                            <div class="comp-info-left col-xs-6">
+                                <span class="tittle">{{n.companyName}}</span><br>
+                                <span>{{n.industryList|industryFilter1}}</span>
+                            </div>
+                            <div class="comp-info-right col-xs-6">
+                                <div class="comp-info-right-img">
+                                    <img ng-src="{{n.logo}}">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--页码-->
+            <div class="col-xs-12">
+                <pagination ng-if="vm.total" total="{{vm.total}}"></pagination>
+            </div>
+        </div>
+    </div>
+    <!--没有数据时，显示404页面-->
+    <div class="row">
+        <div class="search-page col-xs-12">
+            <not-find ng-if="vm.isNotFind" showrecommend="{{vm.isShowRecommend}}" size="3"></not-find>
+        </div>
+
+    </div>
+</div>
